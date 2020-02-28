@@ -1,0 +1,22 @@
+<h2>Login</h2>
+
+<form action="#!/vista2">
+    <label>User</label><input ng-change="getUsername()" type="text" ng-model="username"><br><br>
+    <a href="#!/vista2">Did You forget your password?</a><br>
+</form>
+
+<fieldset>
+    <legend><h2>Add friends</h2></legend>
+<form>
+   
+   Name: <input type="text" ng-model="friendName"><br>
+   Age: <input type="text" ng-model="friendAge"><br>
+</form>
+<div class="error-{{errMsg}}">{{message}}</div>
+<ul>
+    <li ng-repeat="friend in friends">{{friend.name}} tiene {{friend.age}} años</li>
+</ul>
+<button ng-click="addFriends()">Add a friend</button>
+<button ng-click="removeFirst()">Remove the first</button>
+<button ng-click="remove()">Remove</button>
+</fieldset>
